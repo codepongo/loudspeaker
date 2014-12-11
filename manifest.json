@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "loudspeaker",
+    "version": "1.0",
+    "description": "read the selection text aloud",
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ]
+    },
+    "icons": {
+        "16": "images/yangshengqi16.png"
+        ,"48": "images/yangshengqi64.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["js/content.js"]
+        }
+    ],
+    "permissions": [
+        "contextMenus"
+        ,"tts"
+    ]
+}
